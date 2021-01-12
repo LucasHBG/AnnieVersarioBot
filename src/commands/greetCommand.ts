@@ -2,13 +2,13 @@ import Command from "./commandInterface";
 import { Message } from "discord.js";
 
 export class GreetCommand implements Command {
-  commandNames = ["greet", "hello"];
+  commandNames = ["greet", "hello", "oi", "ola"];
 
   help(commandPrefix: string): string {
-    return `Use ${commandPrefix}greet to get a greeting.`;
+    return `Use ${commandPrefix}oi para receber um oi.`;
   }
 
   async run(message: Message): Promise<void> {
-    await message.reply("hello, User!");
+    await message.reply(`olá 😉`);
   }
 }

@@ -2,10 +2,10 @@ import Command from "./commandInterface";
 import { Message } from "discord.js";
 
 export class TimeCommand implements Command {
-  commandNames = ["time"];
+  commandNames = ["time","tempo"];
 
   help(commandPrefix: string): string {
-    return `Use ${commandPrefix}time to current time.`;
+    return `Use ${commandPrefix}tempo para saber o horário atual.`;
   }
 
   async run(message: Message): Promise<void> {
